@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+<aside class="sidebar">
+  <section class="me">
+    <picture>
+      <img src="{{ "/images/josh-minnich.jpg" | prepend: site.baseurl }}" alt="Photo of Josh Minnich">
+    </picture>
+
+    <header>
+      <h4>
+        Josh Minnich<br>
+        <small>Software Engineer</small>
+      </h4>
+    </header>
+  </section>
+
+  <section class="contact">
+    <header>Contact</header>
+
+    <ul>
+      <li>
+        <i class="ss-icon">&#x1F517;</i> <a href="http://joshminnich.com">joshminnich.com</a>
+      </li>
+      <li>
+        <i class="ss-icon">&#x1F4E5;</i> <a href="mailto:joshminnich@gmail.com">joshminnich@gmail.com</a>
+      </li>
+      <li>
+        <i class="ss-icon">&#x2302;</i> Austin, TX
+      </li>
+    </ul>
+  </section>
+
+  <section class="about">
+    <header>Who Am I?</header>
+
+    <summary>
+      <p>I'm a full stack software engineer currently living in Austin, TX and working at Revolution Messaging.</p>
+    </summary>
+  </section>
+
+  <section class="social">
+    <ul>
+      <li>
+        <a class="ss-icon ss-social-regular twitter" href="https://twitter.com/{{ site.twitter_username }}">twitter</a>
+      </li>
+      <li>
+        <a class="ss-icon ss-social-regular github" href="https://github.com/{{ site.github_username }}">github</a>
+      </li>
+      <li>
+        <a class="ss-icon ss-social-regular instagram" href="https://instagram.com/{{ site.instagram_username }}">instagram</a>
+      </li>
+      <li>
+        <a class="ss-icon ss-social-regular spotify" href="https://play.spotify.com/user/{{ site.spotify_username }}">spotify</a>
+      </li>
+      <li>
+        <a class="ss-icon ss-social-regular linkedin" href="https://www.linkedin.com/in/{{ site.linkedin_username }}">linkedin</a>
+      </li>
+    </ul>
+  </section>
+
+  <a class="download-resume" href="https://github.com/joshmosh/resume">Download Resume</a>
+</aside>
+
+<main>
+  <section class="introduction">
+    <header>
+      <h2>Allow me to introduce myself&hellip;</h2>
+    </header>
+
+    <article>
+      {{ site.data.content.introduction }}
+    </article>
+  </section>
+
+  <section class="experience">
+    <header>
+      <h2>Work Experience</h2>
+    </header>
+
+    {% for job in site.data.jobs %}
+      <section class="job">
+        <aside>{{ job.dates }}</aside>
+
+        <article>
+          <header>{{ job.business }}</header>
+
+          <p>{{ job.description }}</p>
+        </article>
+      </section>
+    {% endfor %}
+  </section>
+</main>

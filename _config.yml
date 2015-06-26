@@ -1,0 +1,20 @@
+# Site settings
+title: Josh Minnich
+email: joshminnich@gmail.com
+description: Personal website of full stack software engineer Josh Minnch.
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://joshminnich.com" # the base hostname & protocol for your site
+
+twitter_username: joshminnich
+github_username:  joshmosh
+instagram_username: joshminnich
+spotify_username: joshminnich
+linkedin_username: joshminnich
+
+# Build settings
+markdown: kramdown
+
+# Sass settings
+sass:
+  style: compressed

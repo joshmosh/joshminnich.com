@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+@import
+  "vendor/bourbon/bourbon",
+  "vendor/base/base",
+  "vendor/neat/neat";
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 1.5625em 1.5625em 1.5625em 21.875em;
+}
+
+// Typography
+
+h1 { font-size: $base-font-size * 2; }
+h2 { font-size: $base-font-size * 1.6; }
+h3 { font-size: $base-font-size * 1.2; }
+h4, h5, h6 { font-size: $base-font-size; }
+
+ul, ol {
+  margin-bottom: $small-spacing;
+}
+
+header { font-weight: bold; }
+
+// Layout
+
+.sidebar {
+  background-color: #353535;
+  color: #F5F5F5;
+  bottom: 0;
+  left: 0;
+  padding: 1.5625em 3.125em;
+  position: fixed;
+  top: 0;
+  width: 18.75em;
+
+  section {
+    margin-bottom: $base-spacing;
+
+    header {
+      font-weight: bold;
+
+      small {
+        font-size: $base-font-size;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .download-resume {
+    border: 2px solid #FFF;
+    border-radius: 4px;
+    bottom: 1.5625em;
+    color: #FFF;
+    display: block;
+    font-weight: bold;
+    left: 3.125em;
+    padding: 1em;
+    position: absolute;
+    right: 3.125em;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .75s, border-color .75s, color .75s;
+
+    &:hover {
+      background-color: $blue;
+      border-color: $blue;
+      color: #FFF;
+    }
+  }
+}
+
+.me {
+  picture {
+    background-color: #FFF;
+    border-radius: 10000px;
+    display: block;
+    height: 200px;
+    text-align: center;
+    margin-bottom: 1.5625em;
+    width: 200px;
+  }
+
+  img {
+    border-radius: 10000px;
+    box-shadow: inset 0 0 4px #FFF;
+    height: 192px;
+    margin: 4px;
+    width: 192px;
+  }
+}
+
+.contact .ss-icon {
+  font-size: $base-font-size * .8;
+  margin-right: 5px;
+}
+
+.social ul {
+  width: 100%;
+
+  li {
+    display: table-cell;
+    font-size: $base-font-size * 1.5;
+    text-align: center;
+    width: 1%;
+
+    a {
+      color: #666;
+      transition: color .75s;
+    }
+  }
+
+  .twitter:hover { color: #00ACED; }
+  .github:hover { color: #FFF; }
+  .spotify:hover { color: #2EBD59; }
+  .instagram:hover { color: #517FA4; }
+  .linkedin:hover { color: #007BB6; }
+}
+
+main {
+  width: 37.5em;
+}
+
+.introduction {
+  margin-bottom: $base-spacing * 2;
+}
+
+.job {
+  @include outer-container;
+
+  margin-bottom: $small-spacing;
+
+  aside {
+    @include span-columns(3);
+
+    color: #999;
+  }
+
+  article {
+    @include span-columns(9);
+  }
+}
+
+// Mobile
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 0;
+  }
+
+  .sidebar {
+    padding: 1em;
+    position: static;
+    width: 100%;
+
+    .download-resume {
+      display: none;
+    }
+  }
+
+  .me picture {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .me header, .contact { text-align: center; }
+
+  main {
+    padding: 1em;
+    width: 100%;
+  }
+}
