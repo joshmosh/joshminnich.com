@@ -51,28 +51,6 @@ header { font-weight: bold; }
       }
     }
   }
-
-  .download-resume {
-    border: 2px solid #FFF;
-    border-radius: 4px;
-    bottom: 1.5625em;
-    color: #FFF;
-    display: block;
-    font-weight: bold;
-    left: 3.125em;
-    padding: 1em;
-    position: absolute;
-    right: 3.125em;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color .75s, border-color .75s, color .75s;
-
-    &:hover {
-      background-color: $blue;
-      border-color: $blue;
-      color: #FFF;
-    }
-  }
 }
 
 .me {
