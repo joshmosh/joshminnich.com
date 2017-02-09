@@ -11,10 +11,15 @@ html, body {
 }
 
 body {
-  padding: 1.5625em 1.5625em 1.5625em 21.875em;
+  font-family: "Fira Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  padding: 1.5625em 1.5625em 1.5625em 23.4375em;
 }
 
 // Typography
+
+h1, h2, h3, h4, h5, h6, header {
+  font-family: "Fira Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
 
 h1 { font-size: $base-font-size * 2; }
 h2 { font-size: $base-font-size * 1.6; }
@@ -25,7 +30,7 @@ ul, ol {
   margin-bottom: $small-spacing;
 }
 
-header { font-weight: bold; }
+header { font-weight: 500; }
 
 // Layout
 
@@ -37,13 +42,13 @@ header { font-weight: bold; }
   padding: 1.5625em 3.125em;
   position: fixed;
   top: 0;
-  width: 18.75em;
+  width: 20.3125em;
 
   section {
     margin-bottom: $base-spacing;
 
     header {
-      font-weight: bold;
+      font-weight: 500;
 
       small {
         font-size: $base-font-size;
